@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guia de Viagem</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="marca">🧭 <strong>Guia de Viagem</strong></div>
+    <input id="busca" type="search" placeholder="Buscar neste país…" aria-label="Buscar">
+    <button id="btn-roteiro" class="btn-roteiro">🗒️ Meu roteiro <span id="cont-roteiro">0</span></button>
+  </header>
+
+  <nav class="paises" id="paises" aria-label="Países"></nav>
+
+  <section class="capa" id="capa" aria-label="País selecionado"></section>
+
+  <main class="layout">
+    <section class="painel">
+      <div class="progresso" id="progresso"></div>
+      <div class="abas" id="abas" role="tablist"></div>
+      <div id="filtros" class="filtros"></div>
+      <div id="lista" class="lista"></div>
+    </section>
+    <section class="mapa-caixa">
+      <div id="mapa"></div>
+      <div class="legenda"><span class="dot dot-novo"></span> a visitar <span class="dot dot-ok"></span> visitado <span class="dot dot-rot"></span> no roteiro</div>
+    </section>
+  </main>
+
+  <footer class="rodape">Fotos: <a href="https://commons.wikimedia.org" target="_blank" rel="noopener">Wikimedia Commons</a> / Wikipédia, com licenças livres. Mapa © OpenStreetMap.</footer>
+
+  <dialog id="dlg-roteiro">
+    <div class="dlg-topo"><h2>Meu roteiro</h2><button id="fechar-roteiro" aria-label="Fechar">✕</button></div>
+    <div id="roteiro-corpo"></div>
+    <div class="dlg-base">
+      <button id="copiar-roteiro">Copiar texto</button>
+      <button id="limpar-roteiro" class="perigo">Limpar</button>
+    </div>
+  </dialog>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script src="dados.js"></script>
+  <script src="imagens.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
