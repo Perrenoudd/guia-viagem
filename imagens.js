@@ -2,7 +2,7 @@
    IMAGENS
    As fotos vêm da Wikipédia / Wikimedia Commons (licenças livres),
    buscadas pelo título do artigo. Formato:  "Nome do lugar": "Título do artigo"
-   Para outro idioma use o prefixo:  "en:Título".
+   Para outro idioma use o prefixo:  "en:Título". Para uma foto específica do Commons: "commons:File:Nome.jpg".
    Lugares sem entrada aqui aparecem com um fundo colorido e um ícone.
    ============================================================ */
 window.IMAGENS = {
@@ -41,7 +41,7 @@ window.IMAGENS = {
   "Francesinha": "Francesinha",
   "Bacalhau à Brás": "Bacalhau à Brás",
   "Cabo da Roca": "Cabo da Roca",
-  "Gruta de Benagil": "Algar de Benagil",
+  "Gruta de Benagil": "commons:File:A Catedral de Benagil.JPG",
   "Lagoa das Sete Cidades": "Lagoa das Sete Cidades",
   "Parque Nacional da Peneda-Gerês": "Parque Nacional da Peneda-Gerês",
   "Pico do Arieiro": "Pico do Arieiro",
@@ -63,9 +63,9 @@ window.IMAGENS = {
   "Ramen tonkotsu": "Rámen",
   "Takoyaki": "Takoyaki",
   "Okonomiyaki": "Okonomiyaki",
-  "Bambuzal de Arashiyama": "Arashiyama",
+  "Bambuzal de Arashiyama": "Floresta de Bambu (Quioto, Japão)",
   "Monte Fuji": "Monte Fuji",
-  "Shirakawa-go": "Shirakawa-gō",
+  "Shirakawa-go": "en:Shirakawa-gō",
   "Cruzamento de Shibuya": "Cruzamento de Shibuya",
   "Akihabara": "Akihabara",
   "Ginza": "Ginza",
@@ -73,7 +73,7 @@ window.IMAGENS = {
   "Basílica de São Pedro": "Basílica de São Pedro",
   "Coliseu": "Coliseu",
   "Duomo de Milão": "Catedral de Milão",
-  "Fontana di Trevi": "Fontana de Trevi",
+  "Fontana di Trevi": "Fontana di Trevi",
   "Galleria degli Uffizi": "Galeria Uffizi",
   "Piazza San Marco": "Praça de São Marcos",
   "Pompeia": "Pompeia",
@@ -89,7 +89,7 @@ window.IMAGENS = {
   "Lago di Como": "Lago de Como",
   "Monte Etna": "Etna",
   "Gôndola": "Gôndola",
-  "Mercado do Rialto": "Mercado do Rialto",
+  "Mercado do Rialto": "commons:File:Pescaria Rialto Venice.jpg",
   /* Argentina */
   "Caminito": "Caminito",
   "Casa Rosada": "Casa Rosada",
@@ -99,10 +99,10 @@ window.IMAGENS = {
   "Obelisco": "Obelisco de Buenos Aires",
   "Quebrada de Humahuaca": "Quebrada de Humahuaca",
   "Teatro Colón": "Teatro Colón",
-  "Asado": "Asado",
+  "Asado": "en:Asado",
   "Alfajor": "Alfajor",
   "Empanadas salteñas": "Empanada",
-  "Cerro de los Siete Colores": "Purmamarca",
+  "Cerro de los Siete Colores": "en:Cerro de los Siete Colores",
   "Cerro Fitz Roy": "Monte Fitz Roy",
   "Lago Nahuel Huapi": "Lago Nahuel Huapi",
   "Península Valdés": "Península Valdés",
@@ -116,15 +116,15 @@ window.IMAGENS = {
   "Linhas de Nazca": "Linhas de Nazca",
   "Machu Picchu": "Machu Picchu",
   "Ollantaytambo": "Ollantaytambo",
-  "Plaza de Armas": "Praça de Armas de Cusco",
+  "Plaza de Armas": "en:Plaza de Armas (Cusco)",
   "Sacsayhuamán": "Sacsayhuamán",
   "Ceviche": "Ceviche",
-  "Lomo saltado": "Lomo saltado",
+  "Lomo saltado": "en:Lomo saltado",
   "Pisco sour": "Pisco sour",
-  "Cañón del Colca": "Cânion de Colca",
+  "Cañón del Colca": "en:Colca Canyon",
   "Huacachina": "Huacachina",
   "Lago Titicaca": "Lago Titicaca",
-  "Montanha Colorida (Vinicunca)": "Montanha Arco-Íris",
+  "Montanha Colorida (Vinicunca)": "en:Vinicunca",
   "Vale Sagrado": "Vale Sagrado dos Incas",
   "Inti Raymi": "Inti Raymi"
 };

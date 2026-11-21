@@ -38,7 +38,10 @@
   function $(id) { return document.getElementById(id); }
 
   /* ---------- fotos (Wikipédia), com cache e fila ---------- */
-  var cacheFotos = ler("gv_fotos", {});
+  // v2: descarta caches antigos ("gv_fotos") que guardavam "" para respostas 404/429
+  var CHAVE_FOTOS = "gv_fotos_v2";
+  try { localStorage.removeItem("gv_fotos"); } catch (e) { /* ignora */ }
+  var cacheFotos = ler(CHAVE_FOTOS, {});
   var fila = [], ativos = 0, pendentes = {};
   function tituloDe(nome) { return (window.IMAGENS || {})[nome]; }
   function buscarFoto(titulo, cb) {
@@ -50,14 +53,19 @@
     while (ativos < 2 && fila.length) {
       (function (titulo) {
         ativos++;
-        var en = titulo.indexOf("en:") === 0, t = en ? titulo.slice(3) : titulo;
-        var url = "https://" + (en ? "en" : "pt") + ".wikipedia.org/api/rest_v1/page/summary/" + encodeURIComponent(t.replace(/ /g, "_"));
-        fetch(url).then(function (r) { return r.ok ? r.json() : null; }).then(function (j) {
-          var src = j && j.thumbnail ? j.thumbnail.source.replace(/\/\d+px-/, "/960px-") : "";
-          cacheFotos[titulo] = src; gravar("gv_fotos", cacheFotos);
-          return src;
-        }).catch(function () { return null; }).then(function (src) {
-          // em caso de erro de rede (null) não grava no cache, para tentar de novo depois
+        var host = "pt.wikipedia.org", t = titulo;
+        if (titulo.indexOf("en:") === 0) { host = "en.wikipedia.org"; t = titulo.slice(3); }
+        else if (titulo.indexOf("commons:") === 0) { host = "commons.wikimedia.org"; t = titulo.slice(8); }
+        var url = "https://" + host + "/api/rest_v1/page/summary/" + encodeURIComponent(t.replace(/ /g, "_"));
+        fetch(url).then(function (r) {
+          // 404, 429 etc.: não grava no cache, para tentar de novo numa próxima visita
+          if (!r.ok) return "";
+          return r.json().then(function (j) {
+            var src = j && j.thumbnail ? j.thumbnail.source.replace(/\/\d+px-/, "/960px-") : "";
+            cacheFotos[titulo] = src; gravar(CHAVE_FOTOS, cacheFotos); // 200: grava (src vazio = artigo sem foto)
+            return src;
+          });
+        }).catch(function () { return ""; }).then(function (src) {
           (pendentes[titulo] || []).forEach(function (cb) { cb(src || ""); });
           delete pendentes[titulo]; ativos--; setTimeout(rodarFila, 150);
         });

@@ -37,7 +37,7 @@ window.PAISES = [
       { nome: "Lençóis Maranhenses", cidade: "Barreirinhas (MA)", desc: "Dunas brancas com lagoas de água azul na época das chuvas.", lat: -2.5333, lng: -43.1167 },
       { nome: "Pantanal", cidade: "Mato Grosso / Mato Grosso do Sul", desc: "A maior planície alagável do mundo, ótima para ver onças e jacarés.", lat: -17.8, lng: -57.4 },
       { nome: "Rio da Prata", cidade: "Bonito (MS)", desc: "Rios de água transparente para flutuação.", lat: -21.2, lng: -56.5 },
-      { nome: "Monte Roraima", cidade: "Roraima", desc: "Tepui de topo plano na tríplice fronteira com Venezuela e Guiana.", lat: -5.1433, lng: -60.7619 }
+      { nome: "Monte Roraima", cidade: "Roraima", desc: "Tepui de topo plano na tríplice fronteira com Venezuela e Guiana.", lat: 5.1433, lng: -60.7619 }
     ],
     experiencias: [
       { nome: "Carnaval de Salvador", cidade: "Salvador (BA)", desc: "Trios elétricos, blocos e mais de uma semana de festa.", lat: -12.9777, lng: -38.5016 },
@@ -70,7 +70,7 @@ window.PAISES = [
     ],
     rotas: [
       { nome: "Caminho da Fé", tipo: "Peregrinação", dur: "10 a 14 dias", dist: "~318 km", desc: "De Águas da Prata (SP) até Aparecida (SP).", lat: -21.933, lng: -46.717 },
-      { nome: "Monte Roraima", tipo: "Trilha", dur: "~6 dias", dist: "—", desc: "Ida e volta ao topo do tepui, com guia e acampamento.", lat: -5.1433, lng: -60.7619 },
+      { nome: "Monte Roraima", tipo: "Trilha", dur: "~6 dias", dist: "—", desc: "Ida e volta ao topo do tepui, com guia e acampamento.", lat: 5.1433, lng: -60.7619 },
       { nome: "Pico da Bandeira", tipo: "Trilha", dur: "~2 dias", dist: "—", desc: "Terceiro ponto mais alto do Brasil, no Caparaó.", lat: -20.4244, lng: -41.7981 },
       { nome: "Travessia Petrópolis–Teresópolis", tipo: "Trilha", dur: "~3 dias", dist: "~30 km", desc: "Clássica travessia da Serra dos Órgãos.", lat: -22.452, lng: -42.983 },
       { nome: "Vale do Pati", tipo: "Trilha", dur: "3 a 5 dias", dist: "—", desc: "Caminhada entre casas de moradores e mirantes na Chapada Diamantina.", lat: -12.67, lng: -41.52 }
